@@ -229,13 +229,17 @@ setError('Por favor, completa todas las preguntas requeridas.');
 return;
 }
 
-// Aquí puedes configurar el envío a FormSpree, email, o GitHub Issues
-// Por ahora, simularemos el envío exitoso
-console.log('Datos de la encuesta:', formData);
-
-// Simular envío
+// Enviar a FormSpree
+fetch('https://formspree.io/f/xangroed', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify(formData)
+})
+.then(response => {
+if (response.ok) {
 setEnviado(true);
-
 // Limpiar formulario después de 3 segundos
 setTimeout(() => {
 setFormData({
@@ -248,6 +252,13 @@ comentarios: ''
 });
 setEnviado(false);
 }, 3000);
+} else {
+setError('Hubo un error al enviar la encuesta. Por favor, intenta de nuevo.');
+}
+})
+.catch(() => {
+setError('Error de conexión. Verifica tu internet e intenta de nuevo.');
+});
 };
 
 const formStyles = {
