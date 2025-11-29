@@ -198,7 +198,267 @@ services: ["Consulta psicológica", "Orientación", "Primera ayuda psicológica"
 } 
 ]; 
  
-// Componente del Selector 
+// Componente de Encuesta
+const EncuestaForm = () => {
+const [formData, setFormData] = useState({
+nombre: '',
+pregunta1: '',
+pregunta2: '',
+pregunta3: '',
+pregunta4: '',
+comentarios: ''
+});
+const [enviado, setEnviado] = useState(false);
+const [error, setError] = useState('');
+
+const handleChange = (e) => {
+const { name, value } = e.target;
+setFormData(prev => ({
+...prev,
+[name]: value
+}));
+};
+
+const handleSubmit = (e) => {
+e.preventDefault();
+setError('');
+
+// Validación básica
+if (!formData.pregunta1 || !formData.pregunta2 || !formData.pregunta3 || !formData.pregunta4) {
+setError('Por favor, completa todas las preguntas requeridas.');
+return;
+}
+
+// Aquí puedes configurar el envío a FormSpree, email, o GitHub Issues
+// Por ahora, simularemos el envío exitoso
+console.log('Datos de la encuesta:', formData);
+
+// Simular envío
+setEnviado(true);
+
+// Limpiar formulario después de 3 segundos
+setTimeout(() => {
+setFormData({
+nombre: '',
+pregunta1: '',
+pregunta2: '',
+pregunta3: '',
+pregunta4: '',
+comentarios: ''
+});
+setEnviado(false);
+}, 3000);
+};
+
+const formStyles = {
+form: {
+backgroundColor: 'white',
+padding: '20px',
+borderRadius: '10px',
+marginTop: '20px'
+},
+inputGroup: {
+marginBottom: '20px'
+},
+label: {
+display: 'block',
+marginBottom: '8px',
+fontWeight: 'bold',
+color: '#2e7d32'
+},
+input: {
+width: '100%',
+padding: '10px',
+fontSize: '16px',
+border: '2px solid #c8e6c9',
+borderRadius: '5px',
+boxSizing: 'border-box'
+},
+select: {
+width: '100%',
+padding: '10px',
+fontSize: '16px',
+border: '2px solid #c8e6c9',
+borderRadius: '5px',
+backgroundColor: 'white',
+boxSizing: 'border-box'
+},
+textarea: {
+width: '100%',
+padding: '10px',
+fontSize: '16px',
+border: '2px solid #c8e6c9',
+borderRadius: '5px',
+minHeight: '100px',
+resize: 'vertical',
+fontFamily: 'inherit',
+boxSizing: 'border-box'
+},
+button: {
+backgroundColor: '#4caf50',
+color: 'white',
+padding: '12px 30px',
+fontSize: '18px',
+border: 'none',
+borderRadius: '5px',
+cursor: 'pointer',
+fontWeight: 'bold',
+transition: 'background-color 0.3s'
+},
+successMessage: {
+backgroundColor: '#d4edda',
+color: '#155724',
+padding: '15px',
+borderRadius: '5px',
+marginBottom: '20px',
+border: '1px solid #c3e6cb',
+textAlign: 'center'
+},
+errorMessage: {
+backgroundColor: '#f8d7da',
+color: '#721c24',
+padding: '15px',
+borderRadius: '5px',
+marginBottom: '20px',
+border: '1px solid #f5c6cb',
+textAlign: 'center'
+}
+};
+
+return (
+<div style={formStyles.form}>
+{enviado && (
+<div style={formStyles.successMessage}>
+✅ ¡Gracias por tu respuesta! Tu opinión ha sido registrada exitosamente.
+</div>
+)}
+
+{error && (
+<div style={formStyles.errorMessage}>
+❌ {error}
+</div>
+)}
+
+<form onSubmit={handleSubmit}>
+<div style={formStyles.inputGroup}>
+<label style={formStyles.label}>
+Nombre (opcional):
+</label>
+<input
+type="text"
+name="nombre"
+value={formData.nombre}
+onChange={handleChange}
+style={formStyles.input}
+placeholder="Tu nombre"
+/>
+</div>
+
+<div style={formStyles.inputGroup}>
+<label style={formStyles.label}>
+1. ¿Cómo calificarías el taller en general? *
+</label>
+<select
+name="pregunta1"
+value={formData.pregunta1}
+onChange={handleChange}
+style={formStyles.select}
+required
+>
+<option value="">Selecciona una opción</option>
+<option value="excelente">Excelente</option>
+<option value="muy-bueno">Muy bueno</option>
+<option value="bueno">Bueno</option>
+<option value="regular">Regular</option>
+<option value="malo">Malo</option>
+</select>
+</div>
+
+<div style={formStyles.inputGroup}>
+<label style={formStyles.label}>
+2. ¿Las actividades del taller fueron útiles para ti? *
+</label>
+<select
+name="pregunta2"
+value={formData.pregunta2}
+onChange={handleChange}
+style={formStyles.select}
+required
+>
+<option value="">Selecciona una opción</option>
+<option value="muy-utiles">Muy útiles</option>
+<option value="utiles">Útiles</option>
+<option value="poco-utiles">Poco útiles</option>
+<option value="no-utiles">No fueron útiles</option>
+</select>
+</div>
+
+<div style={formStyles.inputGroup}>
+<label style={formStyles.label}>
+3. ¿Te sentiste cómodo/a durante el taller? *
+</label>
+<select
+name="pregunta3"
+value={formData.pregunta3}
+onChange={handleChange}
+style={formStyles.select}
+required
+>
+<option value="">Selecciona una opción</option>
+<option value="muy-comodo">Muy cómodo/a</option>
+<option value="comodo">Cómodo/a</option>
+<option value="neutral">Neutral</option>
+<option value="incomodo">Incómodo/a</option>
+</select>
+</div>
+
+<div style={formStyles.inputGroup}>
+<label style={formStyles.label}>
+4. ¿Recomendarías este taller a otras personas? *
+</label>
+<select
+name="pregunta4"
+value={formData.pregunta4}
+onChange={handleChange}
+style={formStyles.select}
+required
+>
+<option value="">Selecciona una opción</option>
+<option value="definitivamente-si">Definitivamente sí</option>
+<option value="probablemente-si">Probablemente sí</option>
+<option value="no-estoy-seguro">No estoy seguro/a</option>
+<option value="probablemente-no">Probablemente no</option>
+<option value="definitivamente-no">Definitivamente no</option>
+</select>
+</div>
+
+<div style={formStyles.inputGroup}>
+<label style={formStyles.label}>
+Comentarios adicionales:
+</label>
+<textarea
+name="comentarios"
+value={formData.comentarios}
+onChange={handleChange}
+style={formStyles.textarea}
+placeholder="Comparte tus sugerencias, experiencias o cualquier otro comentario..."
+/>
+</div>
+
+<button
+type="submit"
+style={formStyles.button}
+onMouseOver={(e) => e.target.style.backgroundColor = '#388e3c'}
+onMouseOut={(e) => e.target.style.backgroundColor = '#4caf50'}
+>
+Enviar Encuesta
+</button>
+</form>
+</div>
+);
+};
+
+// Componente del Selector
 const LocationSelector = () => { 
 const [selectedLocation, setSelectedLocation] = useState(locationData[0]); 
  
@@ -272,13 +532,14 @@ return (
 }; 
  
 const Navigation = ({ currentSection, setCurrentSection }) => { 
-const sections = [ 
-{ id: "inicio", name: "Inicio" }, 
-{ id: "lugares", name: "Lugares de Tratamiento" }, 
-{ id: "Taller", name: "Taller" }, 
-{ id: "trastornos", name: "Trastornos" }, 
-{ id: "informacion", name: "Información para externos" }, 
-{ id: "creditos", name: "Créditos" }, 
+const sections = [
+{ id: "inicio", name: "Inicio" },
+{ id: "lugares", name: "Lugares de Tratamiento" },
+{ id: "Taller", name: "Taller" },
+{ id: "trastornos", name: "Trastornos" },
+{ id: "informacion", name: "Información para externos" },
+{ id: "encuesta", name: "Encuesta" },
+{ id: "creditos", name: "Créditos" },
 ]; 
  
 return ( 
@@ -458,9 +719,18 @@ están exacerbando su crisis emocional.</li>
 </div> 
 ); 
  
-case "creditos": 
-return ( 
-<div> 
+case "encuesta":
+return (
+<div>
+<h2 style={styles.sectionTitle}>Encuesta de Satisfacción del Taller</h2>
+<p>Tu opinión es muy importante para nosotros. Por favor, ayúdanos a mejorar completando esta breve encuesta.</p>
+<EncuestaForm />
+</div>
+);
+
+case "creditos":
+return (
+<div>
 <h2 style={styles.sectionTitle}>Créditos</h2> 
 <p>Agradecimientos a las instituciones</p> 
 <div style={styles.card}> 
