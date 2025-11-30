@@ -1,5 +1,8 @@
 import { useState } from "react";
-import "./App.css"; 
+import "./App.css";
+import VincularPeluche from "./components/VincularPeluche";
+import Dashboard from "./components/Dashboard";
+import MonitoreoTiempoReal from "./components/MonitoreoTiempoReal"; 
  
 // Estilos principales 
 const styles = { 
@@ -531,9 +534,12 @@ return (
 ); 
 }; 
  
-const Navigation = ({ currentSection, setCurrentSection }) => { 
+const Navigation = ({ currentSection, setCurrentSection }) => {
 const sections = [
 { id: "inicio", name: "Inicio" },
+{ id: "vincular", name: "🦦 Vincular Mi Peluche" },
+{ id: "monitoreo", name: "🎛️ Monitoreo" },
+{ id: "dashboard", name: "📊 Dashboard" },
 { id: "lugares", name: "Lugares de Tratamiento" },
 { id: "Taller", name: "Taller" },
 { id: "trastornos", name: "Trastornos" },
@@ -560,30 +566,39 @@ onClick={() => setCurrentSection(section.id)}
 ); 
 }; 
  
-const MainContent = ({ currentSection }) => { 
-const renderContent = () => { 
-switch (currentSection) { 
-case "inicio": 
-return ( 
-<div> 
-<h2 style={styles.sectionTitle}>Bienvenido a Nutrias en Equilibrio</h2> 
-<p> 
-Este proyecto busca reducir la desinformación y el estigma asociados a los trastornos mentales,  
-fomentando la empatía y la comunicación efectiva entre quienes los padecen y su entorno.  
-Asimismo, pretende orientar a la población hacia espacios de apoyo profesional y recursos de emergencia,  
-fortaleciendo la educación emocional y el bienestar colectivo.  
-</p> 
-<div style={styles.card}> 
-<h3>Acerca de nosotros</h3> 
-<p> 
-La campaña quiere ayudar a que más personas entiendan qué hacer cuando alguien cercano necesita apoyo 
-emocional 
-y a que quienes lo viven aprendan a comunicarse, expresarse y pedir ayuda. 
-El objetivo es que todos tengamos más herramientas para escucharnos, 
-apoyarnos y reconocer que la salud mental importa tanto como la física.  
-</p> 
-</div> 
-</div> 
+const MainContent = ({ currentSection }) => {
+const renderContent = () => {
+switch (currentSection) {
+case "vincular":
+return <VincularPeluche />;
+
+case "monitoreo":
+return <MonitoreoTiempoReal />;
+
+case "dashboard":
+return <Dashboard />;
+
+case "inicio":
+return (
+<div>
+<h2 style={styles.sectionTitle}>Bienvenido a Nutrias en Equilibrio</h2>
+<p>
+Este proyecto busca reducir la desinformación y el estigma asociados a los trastornos mentales,
+fomentando la empatía y la comunicación efectiva entre quienes los padecen y su entorno.
+Asimismo, pretende orientar a la población hacia espacios de apoyo profesional y recursos de emergencia,
+fortaleciendo la educación emocional y el bienestar colectivo.
+</p>
+<div style={styles.card}>
+<h3>Acerca de nosotros</h3>
+<p>
+La campaña quiere ayudar a que más personas entiendan qué hacer cuando alguien cercano necesita apoyo
+emocional
+y a que quienes lo viven aprendan a comunicarse, expresarse y pedir ayuda.
+El objetivo es que todos tengamos más herramientas para escucharnos,
+apoyarnos y reconocer que la salud mental importa tanto como la física.
+</p>
+</div>
+</div>
 ); 
 case "Taller": 
 return( 
