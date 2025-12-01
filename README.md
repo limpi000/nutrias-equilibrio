@@ -67,8 +67,8 @@ Nutrias en Equilibrio es un proyecto que combina hardware (ESP32 + sensor FSR) c
 
 ### Hardware
 - **ESP32** - Microcontrolador con WiFi
-- **Sensor FSR** - Force Sensitive Resistor
-- **Arduino IDE** - Programación del ESP32
+- **Sensor FSR** o **Potenciómetro** - Force Sensitive Resistor
+- **MicroPython** - Lenguaje de programación para ESP32
 
 ---
 
@@ -102,12 +102,13 @@ Ver guía completa en [`FIREBASE_SETUP.md`](./FIREBASE_SETUP.md)
 4. Editar `src/firebaseConfig.js` con tus credenciales
 
 ### 4. Configurar ESP32
-Ver guía completa en [`ESP32_SETUP.md`](./ESP32_SETUP.md)
+Ver guía completa en [`GUIA_MICROPYTHON_ESP32.md`](./GUIA_MICROPYTHON_ESP32.md)
 
 **Resumen:**
-1. Conectar sensor FSR al ESP32
-2. Subir código Arduino (incluido en la guía)
-3. Configurar WiFi y código del peluche
+1. Instalar MicroPython en el ESP32
+2. Conectar potenciómetro o sensor FSR al GPIO 34
+3. Configurar WiFi y código del peluche en `main.py`
+4. Subir `main.py` al ESP32
 
 ### 5. Desarrollo Local
 ```bash
@@ -147,7 +148,10 @@ nutrias-equilibrio/
 │   ├── firebaseConfig.js       # Configuración de Firebase
 │   ├── pelucheUtils.js         # Funciones de manejo de datos
 │   └── soundManager.js         # Gestor de audio
-├── ESP32_SETUP.md              # Guía de configuración del ESP32
+├── main.py                     # Código MicroPython para ESP32
+├── GUIA_MICROPYTHON_ESP32.md   # Guía completa de MicroPython
+├── INICIO_RAPIDO_ESP32.md      # Guía rápida para ESP32
+├── ESP32_SETUP.md              # Documentación técnica ESP32
 ├── FIREBASE_SETUP.md           # Guía de configuración de Firebase
 ├── ENCUESTA_CONFIG.md          # Configuración de encuestas
 └── README.md                   # Este archivo
@@ -184,7 +188,7 @@ Content-Type: application/json
 }
 ```
 
-Ver documentación completa en [`ESP32_SETUP.md`](./ESP32_SETUP.md)
+Ver documentación completa en [`GUIA_MICROPYTHON_ESP32.md`](./GUIA_MICROPYTHON_ESP32.md)
 
 ---
 
