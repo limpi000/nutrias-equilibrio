@@ -118,13 +118,13 @@ border: "2px solid #4caf50"
  
 // Datos de los lugares de tratamiento 
 const locationData = [ 
-{ 
+{
 id: 1, 
 name: "Chihuahua Ortiz Mena", 
 address: "Blvrd Antonio Ortiz Mena 3403, Quintas del Sol, Campestre-Lomas, 31214 Chihuahua, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 18:00", 
 services: ["Terapia individual", "Consulta psicológica"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.7919244326886!2d-106.0421!3d28.6393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM4JzIxLjUiTiAxMDbCsDAyJzMxLjYiVw!5e0!3m2!1ses!2smx!4v1234567890"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.061568673308!2d-106.10191182538266!3d28.62791677566727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea5ccd6000f5ff%3A0xf67b56aecd481b44!2sBlvrd%20Antonio%20Ortiz%20Mena%203403%2C%20Quintas%20del%20Sol%2C%20Campestre-Lomas%2C%2031214%20Chihuahua%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583161143!5m2!1ses-419!2smx"
 }, 
 { 
 id: 2, 
@@ -132,7 +132,7 @@ name: "Chihuahua División del Nte",
 address: "Cesar A. Sandino 1306-I, División del Nte. I Etapa, 31064 Chihuahua, Chih.", 
 schedule: "24 horas", 
 services: ["Emergencias", "Terapia de crisis", "Hospitalización"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123!2d-106.0844!3d28.6544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM5JzE1LjgiTiAxMDbCsDA1JzAzLjgiVw!5e0!3m2!1ses!2smx!4v1234567891"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8811916303234!2d-106.03623592670667!3d28.603340821932672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea5b102aa0b29f%3A0x8d1a0bc226a07b4a!2sCesar%20A.%20Sandino%201306%2C%20Divisi%C3%B3n%20del%20Nte.%20I%20Etapa%2C%2031064%20Chihuahua%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583246140!5m2!1ses-419!2smx"
 }, 
 { 
 id: 3, 
@@ -140,7 +140,7 @@ name: "Chihuahua Zarco",
 address: "Av. Francisco Zarco 3003, Zarco, 31020 Chihuahua, Chih.", 
 schedule: "Lunes a Viernes: 10:00 - 19:00", 
 services: ["Terapia individual", "Familiar"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.234!2d-106.0912!3d28.6521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM5JzA3LjYiTiAxMDbCsDA1JzI4LjMiVw!5e0!3m2!1ses!2smx!4v1234567892"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.385446709801!2d-106.09154162538312!3d28.61820777567261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea5cc7e9d25209%3A0x71c7fcefc19b10e0!2sAv.%20Francisco%20Zarco%203003%2C%20Zarco%2C%2031020%20Chihuahua%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583344410!5m2!1ses-419!2smx"
 }, 
 { 
 id: 4, 
@@ -148,7 +148,7 @@ name: "Juárez",
 address: "Av. de Las Fuentes 1543, Fuentes del Valle, 32500 Juárez, Chih.", 
 schedule: "Lunes a Sábado: 9:00 - 20:00", 
 services: ["Terapia individual", "Talleres", "Orientación"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.456!2d-106.4345!3d31.7367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQ0JzEyLjEiTiAxMDbCsDI2JzA0LjIiVw!5e0!3m2!1ses!2smx!4v1234567893"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.9203686024557!2d-106.42178852523651!3d31.71807017412404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75c12e3544d91%3A0x758cdb216f616b9f!2sAv.%20de%20Las%20Fuentes%201543%2C%20Fuentes%20del%20Valle%2C%2032500%20Ju%C3%A1rez%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583441578!5m2!1ses-419!2smx"
 }, 
 { 
 id: 5, 
@@ -156,7 +156,7 @@ name: "Aldama",
 address: "Ojinaga 1083, Centro, 32910 Juan Aldama, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 17:00", 
 services: ["Terapia comunitaria", "Grupos de apoyo"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.789!2d-105.9123!3d28.1934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDExJzM2LjIiTiAxMDXCsDU0JzQ0LjMiVw!5e0!3m2!1ses!2smx!4v1234567894"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.013728657348!2d-105.91188292537313!3d28.83845127555294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea36266ec02381%3A0xfd814088ddc90c0!2sOjinaga%201083%2C%20Centro%2C%2032910%20Juan%20Aldama%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583509414!5m2!1ses-419!2smx"
 }, 
 { 
 id: 6, 
@@ -164,7 +164,7 @@ name: "Camargo",
 address: "Río Urique 223, Río Florido, 33720 Santa Rosalía de Camargo, Chih.", 
 schedule: "Lunes a Viernes: 10:00 - 18:00", 
 services: ["Terapia individual", "Evaluación psicológica"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.123!2d-105.1678!3d27.6789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQwJzQ0LjAiTiAxMDXCsDEwJzA0LjEiVw!5e0!3m2!1ses!2smx!4v1234567895"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.2913604280875!2d-105.15911522542481!3d27.677388376199715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694af10bfcd4215%3A0xc3d4acc2433e838e!2sR%C3%ADo%20Urique%20223%2C%20R%C3%ADo%20Florido%2C%2033720%20Santa%20Rosal%C3%ADa%20de%20Camargo%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583578278!5m2!1ses-419!2smx"
 }, 
 { 
 id: 7, 
@@ -172,7 +172,7 @@ name: "Casas Grandes",
 address: "Minerva 516, Centro, 31700 Nuevo Casas Grandes, Chih.", 
 schedule: "Lunes a Sábado: 9:00 - 19:00", 
 services: ["Consulta psicológica", "Acompañamiento"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.567!2d-107.9123!3d30.4234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI1JzI0LjIiTiAxMDfCsDU0JzQ0LjMiVw!5e0!3m2!1ses!2smx!4v1234567896"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3440.668126590543!2d-107.92049802529968!3d30.417156474738057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86dcac582146f83f%3A0xee5487a51b19ecdd!2sMinerva%20516%2C%20Centro%2C%2031700%20Nuevo%20Casas%20Grandes%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583631415!5m2!1ses-419!2smx"
 }, 
 { 
 id: 8, 
@@ -180,7 +180,7 @@ name: "Cuauhtémoc",
 address: "Periférico 220-A, Emiliano Zapata, 31579 Cuauhtémoc, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 18:00", 
 services: ["Terapia integral", "Seguimiento"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3489.234!2d-106.8645!3d28.4123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzQ0LjMiTiAxMDbCsDUxJzUyLjIiVw!5e0!3m2!1ses!2smx!4v1234567897"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.588138016952!2d-106.82559792539146!3d28.43168197577503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86c1cbf402a95555%3A0x1d42c9abb5a4b355!2sPerif%C3%A9rico%20220-A%2C%20Emiliano%20Zapata%2C%2031579%20Cuauht%C3%A9moc%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583691886!5m2!1ses-419!2smx"
 }, 
 { 
 id: 9, 
@@ -188,7 +188,7 @@ name: "Delicias",
 address: "Av. 6a. Sur 303, Sur 1, 33000 Delicias, Chih.", 
 schedule: "Lunes a Viernes: 10:00 - 19:00", 
 services: ["Mindfulness", "Terapia cognitiva", "Meditación"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.567!2d-105.4678!3d28.1897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDExJzIyLjkiTiAxMDXCsDI4JzA0LjEiVw!5e0!3m2!1ses!2smx!4v1234567898"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.662630918567!2d-105.47608022540238!3d28.18717387591086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86eb15b919c45b8d%3A0x31ba75edcfa70469!2sAv.%206a.%20Sur%20303%2C%20Sur%201%2C%2033000%20Delicias%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583758140!5m2!1ses-419!2smx"
 }, 
 { 
 id: 10, 
@@ -196,7 +196,7 @@ name: "Meoqui",
 address: "Esquina con Matamoros, C. Ricardo Salgado 2312, San Francisco, 33130 Pedro Meoqui, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 17:00", 
 services: ["Terapia individual", "Familiar", "Grupos"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.678!2d-105.4823!3d28.2634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDE1JzQ4LjIiTiAxMDXCsDI4JzU2LjMiVw!5e0!3m2!1ses!2smx!4v1234567899"
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0607954433985!2d-105.49596302679346!3d28.266173322530133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86eb13e7aca46b05%3A0x2cdddb37a0528a95!2sC.%20Ricardo%20Salgado%202312%2C%20San%20Francisco%2C%2033130%20Pedro%20Meoqui%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583874904!5m2!1ses-419!2smx"
 }, 
 { 
 id: 11, 
@@ -204,7 +204,7 @@ name: "Parral",
 address: "Del Ojito, Centro, 33850 Hidalgo del Parral, Chih.", 
 schedule: "Lunes a Sábado: 9:00 - 18:00", 
 services: ["Consulta psicológica", "Orientación", "Primera ayuda psicológica"],
-mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.345!2d-105.6678!3d26.9312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU1JzUyLjMiTiAxMDXCsDQwJzA0LjEiVw!5e0!3m2!1ses!2smx!4v1234567900"
+mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.176753613792!2d-105.66047572545709!3d26.929610476637123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8694513bf798fbe1%3A0x2eb83e0b352f0001!2sDel%20Ojito%2C%20Hidalgo%20del%20Parral%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1764583927214!5m2!1ses-419!2smx"
 } 
 ]; 
  
