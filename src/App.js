@@ -529,7 +529,7 @@ const Header = () => {
 return ( 
 <header style={styles.header}> 
 <h1>Nutrias en Equilibrio 🦦</h1> 
-<p>Apoyo psicológicoo</p> 
+<p>Apoyo psicológico</p> 
 </header> 
 );      
 }; 
