@@ -226,20 +226,19 @@ const handleSubmit = (e) => {
 e.preventDefault();
 setError('');
 
-// Validación básica
+
 if (!formData.pregunta1 || !formData.pregunta2 || !formData.pregunta3 || !formData.pregunta4) {
 setError('Por favor, completa todas las preguntas requeridas.');
 return;
 }
 
-// Aquí puedes configurar el envío a FormSpree, email, o GitHub Issues
-// Por ahora, simularemos el envío exitoso
+
 console.log('Datos de la encuesta:', formData);
 
-// Simular envío
+
 setEnviado(true);
 
-// Limpiar formulario después de 3 segundos
+
 setTimeout(() => {
 setFormData({
 nombre: '',

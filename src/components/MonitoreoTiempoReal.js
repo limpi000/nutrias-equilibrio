@@ -38,7 +38,7 @@ const MonitoreoTiempoReal = () => {
   }, [presionActual, configuracion]);
 
   const iniciarMonitoreo = async (codigo) => {
-    // Obtener configuración
+    
     const config = await obtenerConfiguracionPeluche(codigo);
     if (config.success) {
       setConfiguracion(config.data);
@@ -54,7 +54,7 @@ const MonitoreoTiempoReal = () => {
         }
       }
 
-      // Escuchar actualizaciones en tiempo real
+      
       escucharLecturasEnTiempoReal(codigo, (lectura) => {
         setPresionActual(lectura.presion);
         setUltimaActualizacion(lectura.timestamp);

@@ -93,7 +93,7 @@ const VincularPeluche = () => {
       </div>
 
       <form onSubmit={handleVincular} style={styles.form}>
-        {/* Código del Peluche */}
+        
         <div style={styles.formGroup}>
           <label style={styles.label}>Código del Peluche *</label>
           <div style={styles.inputGroup}>
@@ -116,7 +116,7 @@ const VincularPeluche = () => {
           <small style={styles.helpText}>Genera un código nuevo o ingresa uno existente</small>
         </div>
 
-        {/* Nombre del Usuario */}
+        
         <div style={styles.formGroup}>
           <label style={styles.label}>Tu Nombre (opcional)</label>
           <input
@@ -128,7 +128,7 @@ const VincularPeluche = () => {
           />
         </div>
 
-        {/* Contactos de Emergencia */}
+        
         <div style={styles.formGroup}>
           <label style={styles.label}>Contactos de Emergencia</label>
           <input
@@ -162,7 +162,7 @@ const VincularPeluche = () => {
           <small style={styles.helpText}>Presión a partir de la cual se activa la alerta de crisis</small>
         </div>
 
-        {/* Preferencias de Sonido */}
+        
         <div style={styles.formGroup}>
           <label style={styles.label}>Sonido Relajante Preferido</label>
           <select

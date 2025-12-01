@@ -11,7 +11,7 @@ const Dashboard = () => {
   const [pelucheVinculado, setPelucheVinculado] = useState(false);
 
   useEffect(() => {
-    // Intentar cargar código guardado
+    
     const codigoGuardado = localStorage.getItem('codigoPelucheActual');
     if (codigoGuardado) {
       setCodigoPeluche(codigoGuardado);
