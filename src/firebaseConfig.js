@@ -2,16 +2,15 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
-// IMPORTANTE: Reemplaza estos valores con tu configuración de Firebase
-// Ve a Firebase Console > Project Settings > Your apps > Web app
+// Configuración de Firebase
 const firebaseConfig = {
-  apiKey: "TU_API_KEY_AQUI",
-  authDomain: "TU_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://TU_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_PROJECT_ID.appspot.com",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+  apiKey: "AIzaSyAjIATIFlP3cg8P7mqvXNy0xY9gfy1eNQo",
+  authDomain: "nutrias-equilibrio.firebaseapp.com",
+  databaseURL: "https://nutrias-equilibrio-default-rtdb.firebaseio.com",
+  projectId: "nutrias-equilibrio",
+  storageBucket: "nutrias-equilibrio.firebasestorage.app",
+  messagingSenderId: "365322544392",
+  appId: "1:365322544392:web:75ff00aaa0cba72985f8bd"
 };
 
 // Inicializar Firebase
