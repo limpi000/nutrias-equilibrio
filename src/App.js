@@ -106,17 +106,13 @@ padding: "20px",
 marginTop: "15px", 
 boxShadow: "0 2px 5px rgba(0,0,0,0.1)", 
 }, 
-mapPlaceholder: { 
+mapContainer: { 
 width: "100%", 
-height: "200px", 
-backgroundColor: "#c8e6c9", 
+height: "300px", 
 borderRadius: "5px", 
-display: "flex", 
-alignItems: "center", 
-justifyContent: "center", 
+overflow: "hidden", 
 marginTop: "10px", 
-color: "#2e7d32", 
-fontWeight: "bold", 
+border: "2px solid #4caf50" 
 } 
 }; 
  
@@ -127,77 +123,88 @@ id: 1,
 name: "Chihuahua Ortiz Mena", 
 address: "Blvrd Antonio Ortiz Mena 3403, Quintas del Sol, Campestre-Lomas, 31214 Chihuahua, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 18:00", 
-services: ["Terapia individual", "Consulta psicológica"] 
+services: ["Terapia individual", "Consulta psicológica"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.7919244326886!2d-106.0421!3d28.6393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM4JzIxLjUiTiAxMDbCsDAyJzMxLjYiVw!5e0!3m2!1ses!2smx!4v1234567890"
 }, 
 { 
 id: 2, 
 name: "Chihuahua División del Nte", 
 address: "Cesar A. Sandino 1306-I, División del Nte. I Etapa, 31064 Chihuahua, Chih.", 
 schedule: "24 horas", 
-services: ["Emergencias", "Terapia de crisis", "Hospitalización"] 
+services: ["Emergencias", "Terapia de crisis", "Hospitalización"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123!2d-106.0844!3d28.6544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM5JzE1LjgiTiAxMDbCsDA1JzAzLjgiVw!5e0!3m2!1ses!2smx!4v1234567891"
 }, 
 { 
 id: 3, 
 name: "Chihuahua Zarco", 
 address: "Av. Francisco Zarco 3003, Zarco, 31020 Chihuahua, Chih.", 
 schedule: "Lunes a Viernes: 10:00 - 19:00", 
-services: ["Terapia individual", "Familiar"] 
+services: ["Terapia individual", "Familiar"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.234!2d-106.0912!3d28.6521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM5JzA3LjYiTiAxMDbCsDA1JzI4LjMiVw!5e0!3m2!1ses!2smx!4v1234567892"
 }, 
 { 
 id: 4, 
 name: "Juárez", 
 address: "Av. de Las Fuentes 1543, Fuentes del Valle, 32500 Juárez, Chih.", 
 schedule: "Lunes a Sábado: 9:00 - 20:00", 
-services: ["Terapia individual", "Talleres", "Orientación"] 
+services: ["Terapia individual", "Talleres", "Orientación"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.456!2d-106.4345!3d31.7367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQ0JzEyLjEiTiAxMDbCsDI2JzA0LjIiVw!5e0!3m2!1ses!2smx!4v1234567893"
 }, 
 { 
 id: 5, 
 name: "Aldama", 
 address: "Ojinaga 1083, Centro, 32910 Juan Aldama, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 17:00", 
-services: ["Terapia comunitaria", "Grupos de apoyo"] 
+services: ["Terapia comunitaria", "Grupos de apoyo"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.789!2d-105.9123!3d28.1934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDExJzM2LjIiTiAxMDXCsDU0JzQ0LjMiVw!5e0!3m2!1ses!2smx!4v1234567894"
 }, 
 { 
 id: 6, 
 name: "Camargo", 
 address: "Río Urique 223, Río Florido, 33720 Santa Rosalía de Camargo, Chih.", 
 schedule: "Lunes a Viernes: 10:00 - 18:00", 
-services: ["Terapia individual", "Evaluación psicológica"] 
+services: ["Terapia individual", "Evaluación psicológica"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.123!2d-105.1678!3d27.6789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQwJzQ0LjAiTiAxMDXCsDEwJzA0LjEiVw!5e0!3m2!1ses!2smx!4v1234567895"
 }, 
 { 
 id: 7, 
 name: "Casas Grandes", 
 address: "Minerva 516, Centro, 31700 Nuevo Casas Grandes, Chih.", 
 schedule: "Lunes a Sábado: 9:00 - 19:00", 
-services: ["Consulta psicológica", "Acompañamiento"] 
+services: ["Consulta psicológica", "Acompañamiento"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.567!2d-107.9123!3d30.4234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI1JzI0LjIiTiAxMDfCsDU0JzQ0LjMiVw!5e0!3m2!1ses!2smx!4v1234567896"
 }, 
 { 
 id: 8, 
 name: "Cuauhtémoc", 
 address: "Periférico 220-A, Emiliano Zapata, 31579 Cuauhtémoc, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 18:00", 
-services: ["Terapia integral", "Seguimiento"] 
+services: ["Terapia integral", "Seguimiento"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3489.234!2d-106.8645!3d28.4123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzQ0LjMiTiAxMDbCsDUxJzUyLjIiVw!5e0!3m2!1ses!2smx!4v1234567897"
 }, 
 { 
 id: 9, 
 name: "Delicias", 
 address: "Av. 6a. Sur 303, Sur 1, 33000 Delicias, Chih.", 
 schedule: "Lunes a Viernes: 10:00 - 19:00", 
-services: ["Mindfulness", "Terapia cognitiva", "Meditación"] 
+services: ["Mindfulness", "Terapia cognitiva", "Meditación"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.567!2d-105.4678!3d28.1897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDExJzIyLjkiTiAxMDXCsDI4JzA0LjEiVw!5e0!3m2!1ses!2smx!4v1234567898"
 }, 
 { 
 id: 10, 
 name: "Meoqui", 
 address: "Esquina con Matamoros, C. Ricardo Salgado 2312, San Francisco, 33130 Pedro Meoqui, Chih.", 
 schedule: "Lunes a Viernes: 9:00 - 17:00", 
-services: ["Terapia individual", "Familiar", "Grupos"] 
+services: ["Terapia individual", "Familiar", "Grupos"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.678!2d-105.4823!3d28.2634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDE1JzQ4LjIiTiAxMDXCsDI4JzU2LjMiVw!5e0!3m2!1ses!2smx!4v1234567899"
 }, 
 { 
 id: 11, 
 name: "Parral", 
 address: "Del Ojito, Centro, 33850 Hidalgo del Parral, Chih.", 
 schedule: "Lunes a Sábado: 9:00 - 18:00", 
-services: ["Consulta psicológica", "Orientación", "Primera ayuda psicológica"] 
+services: ["Consulta psicológica", "Orientación", "Primera ayuda psicológica"],
+mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.345!2d-105.6678!3d26.9312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU1JzUyLjMiTiAxMDXCsDQwJzA0LjEiVw!5e0!3m2!1ses!2smx!4v1234567900"
 } 
 ]; 
  
@@ -505,9 +512,14 @@ onChange={handleLocationChange}
 </ul> 
 </div> 
  
-<div style={dropdownStyles.mapPlaceholder}> 
-Mapa de {selectedLocation.name} 
-</div> 
+<iframe
+src={selectedLocation.mapUrl}
+style={dropdownStyles.mapContainer}
+allowFullScreen=""
+loading="lazy"
+referrerPolicy="no-referrer-when-downgrade"
+title={`Mapa de ${selectedLocation.name}`}
+/>
 </div> 
 )} 
 </div> 
@@ -518,8 +530,7 @@ Mapa de {selectedLocation.name}
 const CrisisBanner = () => { 
 return ( 
 <div style={styles.crisisBanner}> 
-�
-� ¿Estás en crisis? Llama al: <strong>(614) 194-02-00</strong> - Disponible 24/7 
+🆘 ¿Estás en crisis? Llama al: <strong>(614) 194-02-00</strong> - Disponible 24/7 
 </div> 
 ); 
 }; 
@@ -580,21 +591,106 @@ return <Dashboard />;
 case "inicio":
 return (
 <div>
-<h2 style={styles.sectionTitle}>Bienvenido a Nutrias en Equilibrio</h2>
+<div style={{
+textAlign: 'center',
+padding: '30px 20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '10px',
+marginBottom: '30px'
+}}>
+<div style={{ fontSize: '80px', marginBottom: '20px' }}>🦦</div>
+<h2 style={{ ...styles.sectionTitle, borderBottom: 'none', color: '#2e7d32', fontSize: '32px' }}>
+Bienvenido a Nutrias en Equilibrio
+</h2>
+<p style={{ fontSize: '18px', color: '#2d5016', maxWidth: '800px', margin: '0 auto' }}>
+Tu espacio seguro para el bienestar emocional
+</p>
+</div>
+
+<div style={styles.card}>
+<div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+<div style={{ fontSize: '60px', flexShrink: 0 }}>🦦</div>
+<div style={{ flex: 1 }}>
+<h3 style={{ color: '#2e7d32', marginTop: 0 }}>¿Por qué nutrias?</h3>
+<p>
+Las nutrias son animales sociales que se toman de las manos para no separarse mientras duermen.
+Representan el apoyo mutuo, la conexión y el cuidado que todos necesitamos en momentos difíciles.
+</p>
+</div>
+</div>
+</div>
+
+<div style={styles.card}>
+<h3 style={{ color: '#2e7d32' }}>Nuestra Misión</h3>
 <p>
 Este proyecto busca reducir la desinformación y el estigma asociados a los trastornos mentales,
 fomentando la empatía y la comunicación efectiva entre quienes los padecen y su entorno.
 Asimismo, pretende orientar a la población hacia espacios de apoyo profesional y recursos de emergencia,
 fortaleciendo la educación emocional y el bienestar colectivo.
 </p>
+</div>
+
+<div style={{
+display: 'grid',
+gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+gap: '20px',
+marginTop: '20px'
+}}>
+<div style={{
+...styles.card,
+textAlign: 'center',
+backgroundColor: '#e8f5e9'
+}}>
+<div style={{ fontSize: '48px', marginBottom: '10px' }}>💚</div>
+<h4 style={{ color: '#2e7d32' }}>Empatía</h4>
+<p>Comprender y apoyar sin juzgar</p>
+</div>
+
+<div style={{
+...styles.card,
+textAlign: 'center',
+backgroundColor: '#e8f5e9'
+}}>
+<div style={{ fontSize: '48px', marginBottom: '10px' }}>🤝</div>
+<h4 style={{ color: '#2e7d32' }}>Conexión</h4>
+<p>Nadie debe enfrentar esto solo</p>
+</div>
+
+<div style={{
+...styles.card,
+textAlign: 'center',
+backgroundColor: '#e8f5e9'
+}}>
+<div style={{ fontSize: '48px', marginBottom: '10px' }}>🌱</div>
+<h4 style={{ color: '#2e7d32' }}>Crecimiento</h4>
+<p>Herramientas para el bienestar</p>
+</div>
+</div>
+
 <div style={styles.card}>
-<h3>Acerca de nosotros</h3>
+<div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+<div style={{ flex: 1 }}>
+<h3 style={{ color: '#2e7d32', marginTop: 0 }}>Acerca de nosotros</h3>
 <p>
 La campaña quiere ayudar a que más personas entiendan qué hacer cuando alguien cercano necesita apoyo
-emocional
-y a que quienes lo viven aprendan a comunicarse, expresarse y pedir ayuda.
+emocional y a que quienes lo viven aprendan a comunicarse, expresarse y pedir ayuda.
 El objetivo es que todos tengamos más herramientas para escucharnos,
 apoyarnos y reconocer que la salud mental importa tanto como la física.
+</p>
+</div>
+<div style={{ fontSize: '60px', flexShrink: 0 }}>🦦💙</div>
+</div>
+</div>
+
+<div style={{
+textAlign: 'center',
+padding: '20px',
+backgroundColor: '#c8e6c9',
+borderRadius: '10px',
+marginTop: '20px'
+}}>
+<p style={{ fontSize: '18px', fontWeight: 'bold', color: '#2e7d32', margin: 0 }}>
+"Como las nutrias que se toman de las manos, juntos podemos mantenernos a flote" 🦦🤝🦦
 </p>
 </div>
 </div>
@@ -602,25 +698,131 @@ apoyarnos y reconocer que la salud mental importa tanto como la física.
 case "Taller": 
 return( 
 <div> 
-<h2 style={styles.sectionTitle}>Informacion de nuestro taller </h2> 
+<div style={{
+textAlign: 'center',
+padding: '20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '10px',
+marginBottom: '20px'
+}}>
+<div style={{ fontSize: '60px' }}>🦦🎓</div>
+<h2 style={{ ...styles.sectionTitle, borderBottom: 'none', color: '#2e7d32' }}>
+Información de nuestro taller
+</h2>
+</div>
+
 <div style={styles.card}> 
-<h3>De que trata nuestro taller</h3> 
-<p>El de nuestro taller es informar y concientizar a las personas acerca de los trastornos mentales 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+<div style={{ fontSize: '40px' }}>💡</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>¿De qué trata nuestro taller?</h3>
+</div>
+<p>El objetivo de nuestro taller es informar y concientizar a las personas acerca de los trastornos mentales 
 y sus complicaciones para fomentar el apoyo a quienes padecen de alguno de estos trastornos mentales.</p> 
 </div> 
+
 <div style={styles.card}> 
-<h3>Actividades de nuestro taller</h3> 
-<p>En nuestro taller se encontraran varias actividades para poder saber como controlar tu cuerpo y tu mente 
-en caso de una crisis emcional, al igual que enseñaremos que hacer  
-para ayudar a una persona que este pasando por una crisis emocional, contamos con varios materiales y un 
-peluche que te indica que tanta ansiedad estas sufriendo.</p> 
-<ul>Meditación</ul> 
-<ul>Respiraciones para tranquilizar</ul> 
-<ul>Aprender a tener comunicación efectiva</ul> 
-<ul>Uso de materiales anti-estres</ul> 
-<ul>Platica informativa</ul> 
-<ul>Conclusión grupal</ul> 
-</div> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+<div style={{ fontSize: '40px' }}>🦦✨</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>Tu compañero peluche</h3>
+</div>
+<p>Contamos con un peluche especial que te indica qué tanta ansiedad estás experimentando, 
+ayudándote a reconocer tus emociones y buscar apoyo cuando lo necesites.</p>
+</div>
+
+<div style={styles.card}> 
+<h3 style={{ color: '#2e7d32', marginBottom: '20px' }}>🎯 Actividades de nuestro taller</h3> 
+<p style={{ marginBottom: '20px' }}>
+En nuestro taller encontrarás varias actividades para aprender a controlar tu cuerpo y tu mente 
+en caso de una crisis emocional. También te enseñaremos qué hacer 
+para ayudar a una persona que esté pasando por una crisis emocional.
+</p> 
+
+<div style={{
+display: 'grid',
+gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+gap: '15px',
+marginTop: '20px'
+}}>
+<div style={{
+padding: '15px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '4px solid #4caf50'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '8px' }}>🧘</div>
+<strong>Meditación</strong>
+<p style={{ fontSize: '14px', margin: '5px 0 0 0' }}>Técnicas de relajación</p>
+</div>
+
+<div style={{
+padding: '15px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '4px solid #4caf50'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '8px' }}>💨</div>
+<strong>Respiraciones</strong>
+<p style={{ fontSize: '14px', margin: '5px 0 0 0' }}>Para tranquilizar</p>
+</div>
+
+<div style={{
+padding: '15px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '4px solid #4caf50'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '8px' }}>💬</div>
+<strong>Comunicación efectiva</strong>
+<p style={{ fontSize: '14px', margin: '5px 0 0 0' }}>Expresar emociones</p>
+</div>
+
+<div style={{
+padding: '15px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '4px solid #4caf50'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '8px' }}>🎨</div>
+<strong>Materiales anti-estrés</strong>
+<p style={{ fontSize: '14px', margin: '5px 0 0 0' }}>Herramientas prácticas</p>
+</div>
+
+<div style={{
+padding: '15px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '4px solid #4caf50'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '8px' }}>📚</div>
+<strong>Plática informativa</strong>
+<p style={{ fontSize: '14px', margin: '5px 0 0 0' }}>Conocimiento esencial</p>
+</div>
+
+<div style={{
+padding: '15px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '4px solid #4caf50'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '8px' }}>🤝</div>
+<strong>Conclusión grupal</strong>
+<p style={{ fontSize: '14px', margin: '5px 0 0 0' }}>Compartir experiencias</p>
+</div>
+</div>
+</div>
+
+<div style={{
+textAlign: 'center',
+padding: '20px',
+backgroundColor: '#c8e6c9',
+borderRadius: '10px',
+marginTop: '20px'
+}}>
+<div style={{ fontSize: '40px', marginBottom: '10px' }}>🦦💚</div>
+<p style={{ fontSize: '16px', fontWeight: 'bold', color: '#2e7d32', margin: 0 }}>
+"Juntos aprenderemos a navegar las aguas de nuestras emociones"
+</p>
+</div>
 </div> 
 ); 
  
@@ -628,12 +830,28 @@ peluche que te indica que tanta ansiedad estas sufriendo.</p>
 case "trastornos": 
 return ( 
 <div> 
-<h2 style={styles.sectionTitle}>Información sobre Trastornos</h2> 
-<p> 
-A continuación encontrarás información breve sobre diferentes trastornos psicológicos. 
-</p> 
+<div style={{
+textAlign: 'center',
+padding: '20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '10px',
+marginBottom: '20px'
+}}>
+<div style={{ fontSize: '60px' }}>🧠💚</div>
+<h2 style={{ ...styles.sectionTitle, borderBottom: 'none', color: '#2e7d32' }}>
+Información sobre Trastornos
+</h2>
+<p style={{ maxWidth: '700px', margin: '10px auto 0' }}>
+A continuación encontrarás información breve sobre diferentes trastornos psicológicos.
+Conocer es el primer paso para comprender y apoyar.
+</p>
+</div>
+
 <div style={styles.card}> 
-<h3>Trastorno de ansiedad</h3> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{ fontSize: '35px' }}>😰</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>Trastorno de ansiedad</h3>
+</div>
 <p> 
 La ansiedad es una reacción de miedo o inseguridad hacia situaciones estresantes. 
 Las personas que padecen de un trastorno de ansiedad suelen tener preocupaciones  
@@ -641,27 +859,41 @@ excesivas por ciertas situaciones (debido al trabajo, salud, dinero, relaciones 
 y estas preocupaciones afectan negativamente la manera en la que estas personas actúan. 
 </p> 
 </div> 
+
 <div style={styles.card}> 
-<h3>Depresión</h3> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{ fontSize: '35px' }}>😔</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>Depresión</h3>
+</div>
 <p> 
 La depresión es un trastorno que causa una pérdida de interés y un estado de ánimo más bajo. 
 Las personas que padecen de depresión usualmente evitan actividades que antes disfrutaban,  
 se alejan de sus relaciones sociales, y también suelen tener una baja autoestima. 
 </p> 
 </div> 
+
 <div style={styles.card}> 
-<h3>Trastornos alimenticios</h3> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{ fontSize: '35px' }}>🍽️</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>Trastornos alimenticios</h3>
+</div>
 <p> 
 Los trastornos alimenticios afectan específicamente al comportamiento  
 que se tiene hacia la alimentación como son: la Anorexia, la Bulimia, Trastorno por atracón, etc. 
-Los síntomas de la Anorexia son: Miedo a subir de peso, vómito, las personas que padecen anorexia suelen 
-hacer ejercicio excesivo. 
-Los síntomas de la Bulimia son: Ansiedad por no comer, debilidad física, las personas con bulimia suelen 
-purgar lo comido o hacer ejercicio excesivo y sienten culpa después de comer. 
-</p> 
+</p>
+<div style={{ marginTop: '15px', paddingLeft: '15px', borderLeft: '3px solid #4caf50' }}>
+<p><strong>Anorexia:</strong> Miedo a subir de peso, vómito, las personas que padecen anorexia suelen 
+hacer ejercicio excesivo.</p>
+<p><strong>Bulimia:</strong> Ansiedad por no comer, debilidad física, las personas con bulimia suelen 
+purgar lo comido o hacer ejercicio excesivo y sienten culpa después de comer.</p>
+</div>
 </div> 
+
 <div style={styles.card}> 
-<h3>TDAH</h3> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{ fontSize: '35px' }}>⚡</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>TDAH</h3>
+</div>
 <p> 
 El TDAH es un trastorno cuyos síntomas son: dificultad para concentrarse, hiperactividad, incapacidad para 
 controlar el propio comportamiento. 
@@ -669,8 +901,12 @@ Las personas con TDAH suelen tener dificultades en trabajos escolares y deberes 
 que se distraen. 
 </p> 
 </div> 
+
 <div style={styles.card}> 
-<h3>Autismo</h3> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{ fontSize: '35px' }}>🧩</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>Autismo</h3>
+</div>
 <p> 
 El autismo es un trastorno que puede provocar dificultades sociales y de conducta,  
 las personas con autismo tienen maneras distintas de comunicación y aprendizaje. 
@@ -678,15 +914,33 @@ Algunas características son: evitar el contacto visual, dificultad para relacio
 personas y dificultad para entender las emociones y sentimientos de las otras personas. 
 </p> 
 </div> 
+
 <div style={styles.card}> 
-<h3>TOC</h3> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{ fontSize: '35px' }}>🔄</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>TOC</h3>
+</div>
 <p> 
 El trastorno obsesivo-compulsivo hace que algunos pensamientos se vuelvan incontrolables y se vuelvan en 
 obsesiones. 
 El TOC causa un comportamiento compulsivo en las personas donde se forman obsesiones por el orden, la 
 limpieza, y estos realizan rituales relacionados con su obsesión. 
 </p> 
-</div> 
+</div>
+
+<div style={{
+textAlign: 'center',
+padding: '20px',
+backgroundColor: '#fff3cd',
+borderRadius: '10px',
+marginTop: '20px',
+border: '2px solid #ffc107'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '10px' }}>⚠️</div>
+<p style={{ fontSize: '16px', fontWeight: 'bold', color: '#856404', margin: 0 }}>
+Si tú o alguien que conoces experimenta estos síntomas, busca ayuda profesional. No estás solo/a.
+</p>
+</div>
 </div> 
 ); 
  
@@ -703,33 +957,173 @@ ver la información detallada.</p>
 case "informacion": 
 return ( 
 <div> 
-<h2 style={styles.sectionTitle}>Información para externos</h2> 
-<p>Pasos para saber manejar una crisis</p> 
+<div style={{
+textAlign: 'center',
+padding: '20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '10px',
+marginBottom: '20px'
+}}>
+<div style={{ fontSize: '60px' }}>🆘🤝</div>
+<h2 style={{ ...styles.sectionTitle, borderBottom: 'none', color: '#2e7d32' }}>
+Información para externos
+</h2>
+<p style={{ maxWidth: '700px', margin: '10px auto 0' }}>
+Aprende cómo ayudar a alguien que está atravesando una crisis emocional
+</p>
+</div>
+
 <div style={styles.card}> 
-<h3>¿Que es una crisis emocional?</h3> 
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
+<div style={{ fontSize: '40px' }}>❓</div>
+<h3 style={{ margin: 0, color: '#2e7d32' }}>¿Qué es una crisis emocional?</h3>
+</div>
 <p>Una crisis emocional es un estado en el que una persona se siente desbordada por sus emociones, hasta el 
 punto de no poder enfrentarlas de manera efectiva. 
 Estas crisis pueden generar sentimientos de desesperanza, miedo, confusión y una pérdida de control sobre la 
 propia vida.</p> 
 </div> 
+
 <div style={styles.card}> 
-<h3>Pasos para manejar una crisis emocional</h3> 
-<ul> 
-<li><strong>Validacion emocional:</strong>La primera técnica clave para manejar una crisis emocional es 
+<h3 style={{ color: '#2e7d32', marginBottom: '20px' }}>🛟 Pasos para manejar una crisis emocional</h3> 
+
+<div style={{
+display: 'flex',
+flexDirection: 'column',
+gap: '20px'
+}}>
+<div style={{
+padding: '20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '5px solid #4caf50'
+}}>
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{
+backgroundColor: '#4caf50',
+color: 'white',
+width: '40px',
+height: '40px',
+borderRadius: '50%',
+display: 'flex',
+alignItems: 'center',
+justifyContent: 'center',
+fontSize: '20px',
+fontWeight: 'bold',
+flexShrink: 0
+}}>1</div>
+<h4 style={{ margin: 0, color: '#2e7d32' }}>Validación emocional</h4>
+</div>
+<p style={{ marginLeft: '55px' }}>
+La primera técnica clave para manejar una crisis emocional es 
 validar los sentimientos de la persona. 
-Las emociones intensas a menudo se ven acompañadas de una sensación de incomprensión</li> 
-<li><strong>Tecnicas de respiracion:</strong>Las técnicas de respiración profunda  
-y relajación muscular progresiva pueden ayudar a calmar el sistema nervioso y restablecer la sensación de 
-control.</li> 
-<li><strong>Fomentat en autocuidado:</strong>Durante una crisis emocional, las personas pueden descuidar 
-su bienestar físico y mental.  
-Promover prácticas de autocuidado es esencial para que el paciente recupere el equilibrio y la resiliencia.</li> 
-<li><strong>Reestructuracion cognitiva:</strong>La reestructuración cognitiva es una técnica derivada de la 
-terapia cognitivo-conductual (TCC)  
-que puede ayudar a las personas a identificar y cambiar los pensamientos negativos o distorsionados que 
-están exacerbando su crisis emocional.</li> 
-</ul> 
-</div> 
+Las emociones intensas a menudo se ven acompañadas de una sensación de incomprensión.
+</p>
+</div>
+
+<div style={{
+padding: '20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '5px solid #4caf50'
+}}>
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{
+backgroundColor: '#4caf50',
+color: 'white',
+width: '40px',
+height: '40px',
+borderRadius: '50%',
+display: 'flex',
+alignItems: 'center',
+justifyContent: 'center',
+fontSize: '20px',
+fontWeight: 'bold',
+flexShrink: 0
+}}>2</div>
+<h4 style={{ margin: 0, color: '#2e7d32' }}>Técnicas de respiración</h4>
+</div>
+<p style={{ marginLeft: '55px' }}>
+Las técnicas de respiración profunda y relajación muscular progresiva pueden ayudar a calmar el sistema nervioso y restablecer la sensación de 
+control.
+</p>
+</div>
+
+<div style={{
+padding: '20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '5px solid #4caf50'
+}}>
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{
+backgroundColor: '#4caf50',
+color: 'white',
+width: '40px',
+height: '40px',
+borderRadius: '50%',
+display: 'flex',
+alignItems: 'center',
+justifyContent: 'center',
+fontSize: '20px',
+fontWeight: 'bold',
+flexShrink: 0
+}}>3</div>
+<h4 style={{ margin: 0, color: '#2e7d32' }}>Fomentar el autocuidado</h4>
+</div>
+<p style={{ marginLeft: '55px' }}>
+Durante una crisis emocional, las personas pueden descuidar 
+su bienestar físico y mental. Promover prácticas de autocuidado es esencial para que el paciente recupere el equilibrio y la resiliencia.
+</p>
+</div>
+
+<div style={{
+padding: '20px',
+backgroundColor: '#e8f5e9',
+borderRadius: '8px',
+borderLeft: '5px solid #4caf50'
+}}>
+<div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+<div style={{
+backgroundColor: '#4caf50',
+color: 'white',
+width: '40px',
+height: '40px',
+borderRadius: '50%',
+display: 'flex',
+alignItems: 'center',
+justifyContent: 'center',
+fontSize: '20px',
+fontWeight: 'bold',
+flexShrink: 0
+}}>4</div>
+<h4 style={{ margin: 0, color: '#2e7d32' }}>Reestructuración cognitiva</h4>
+</div>
+<p style={{ marginLeft: '55px' }}>
+La reestructuración cognitiva es una técnica derivada de la 
+terapia cognitivo-conductual (TCC) que puede ayudar a las personas a identificar y cambiar los pensamientos negativos o distorsionados que 
+están exacerbando su crisis emocional.
+</p>
+</div>
+</div>
+</div>
+
+<div style={{
+textAlign: 'center',
+padding: '25px',
+backgroundColor: '#d1f2eb',
+borderRadius: '10px',
+marginTop: '20px',
+border: '2px solid #4caf50'
+}}>
+<div style={{ fontSize: '40px', marginBottom: '15px' }}>🦦💚🦦</div>
+<p style={{ fontSize: '18px', fontWeight: 'bold', color: '#2e7d32', margin: '0 0 10px 0' }}>
+Recuerda: Tu presencia y apoyo pueden hacer la diferencia
+</p>
+<p style={{ fontSize: '14px', color: '#2d5016', margin: 0 }}>
+Como las nutrias que se apoyan mutuamente, podemos ayudar a quienes más lo necesitan
+</p>
+</div>
 </div> 
 ); 
  
@@ -797,21 +1191,112 @@ return <div style={styles.mainContent}>{renderContent()}</div>;
 const Sidebar = () => { 
 return ( 
 <aside style={styles.sidebar}> 
-<h3 style={styles.sectionTitle}>Secciones extras</h3> 
+<div style={{ textAlign: 'center', marginBottom: '20px' }}>
+<div style={{ fontSize: '50px' }}>🦦</div>
+<h3 style={{ ...styles.sectionTitle, borderBottom: 'none', textAlign: 'center' }}>Recursos de Ayuda</h3>
+</div>
+
 <div style={styles.card}> 
-<h4>Líneas de Ayuda</h4> 
-<p>📞 Línea de la vida: 800-911-2000</p> 
-<p>📞 IMPASS: (614) 194-02-00</p> 
+<div style={{ textAlign: 'center', marginBottom: '10px' }}>
+<div style={{ fontSize: '40px' }}>📞</div>
+</div>
+<h4 style={{ color: '#2e7d32', textAlign: 'center' }}>Líneas de Ayuda</h4>
+<div style={{ 
+backgroundColor: '#ffebee', 
+padding: '15px', 
+borderRadius: '8px',
+marginBottom: '10px',
+border: '2px solid #e53935'
+}}>
+<p style={{ margin: '0 0 5px 0', fontWeight: 'bold', color: '#c62828' }}>🆘 Línea de la vida</p>
+<p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold', color: '#c62828' }}>800-911-2000</p>
+<p style={{ margin: '5px 0 0 0', fontSize: '12px', color: '#666' }}>Disponible 24/7</p>
+</div>
+<div style={{ 
+backgroundColor: '#e8f5e9', 
+padding: '15px', 
+borderRadius: '8px',
+border: '2px solid #4caf50'
+}}>
+<p style={{ margin: '0 0 5px 0', fontWeight: 'bold', color: '#2e7d32' }}>💚 IMPASS</p>
+<p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold', color: '#2e7d32' }}>(614) 194-02-00</p>
+<p style={{ margin: '5px 0 0 0', fontSize: '12px', color: '#666' }}>Servicio de Chihuahua</p>
+</div>
 </div> 
+
 <div style={styles.card}> 
-<h4>Horarios de Atención</h4> 
-<p>Lunes a Viernes: 9:00 - 18:00</p> 
-<p>Sábados: 10:00 - 14:00</p> 
+<div style={{ textAlign: 'center', marginBottom: '10px' }}>
+<div style={{ fontSize: '40px' }}>🕐</div>
+</div>
+<h4 style={{ color: '#2e7d32', textAlign: 'center' }}>Horarios de Atención</h4> 
+<div style={{ fontSize: '14px' }}>
+<p style={{ 
+margin: '0 0 8px 0', 
+padding: '10px',
+backgroundColor: 'white',
+borderRadius: '5px'
+}}>
+<strong>Lunes a Viernes:</strong><br/>
+9:00 - 18:00
+</p> 
+<p style={{ 
+margin: 0, 
+padding: '10px',
+backgroundColor: 'white',
+borderRadius: '5px'
+}}>
+<strong>Sábados:</strong><br/>
+10:00 - 14:00
+</p>
+</div>
 </div> 
+
 <div style={styles.card}> 
-<h4>Datos generales</h4> 
-<p>4,4% de la población mundial padece actualmente un trastorno de ansiedad</p> 
-</div> 
+<div style={{ textAlign: 'center', marginBottom: '10px' }}>
+<div style={{ fontSize: '40px' }}>📊</div>
+</div>
+<h4 style={{ color: '#2e7d32', textAlign: 'center' }}>Dato Importante</h4> 
+<div style={{
+backgroundColor: '#fff3cd',
+padding: '15px',
+borderRadius: '8px',
+border: '2px solid #ffc107',
+textAlign: 'center'
+}}>
+<p style={{ 
+fontSize: '32px', 
+fontWeight: 'bold', 
+color: '#856404',
+margin: '0 0 5px 0'
+}}>4.4%</p>
+<p style={{ 
+fontSize: '14px', 
+color: '#856404',
+margin: 0,
+lineHeight: '1.4'
+}}>
+de la población mundial padece actualmente un trastorno de ansiedad
+</p>
+</div>
+</div>
+
+<div style={{
+...styles.card,
+backgroundColor: '#c8e6c9',
+textAlign: 'center'
+}}>
+<div style={{ fontSize: '30px', marginBottom: '10px' }}>🦦💙</div>
+<p style={{ 
+fontSize: '14px', 
+fontWeight: 'bold',
+color: '#2e7d32',
+margin: 0,
+lineHeight: '1.5'
+}}>
+"No estás solo/a.<br/>
+Hay ayuda disponible."
+</p>
+</div>
 </aside> 
 ); 
 }; 
