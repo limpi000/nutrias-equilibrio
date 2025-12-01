@@ -1,12 +1,12 @@
-// Gestor de sonidos relajantes para crisis de ansiedad
 
-// Lista de sonidos disponibles (puedes agregar archivos MP3 a public/sounds/)
+
+
 export const sonidosDisponibles = {
   naturaleza: {
     nombre: 'Sonidos de Naturaleza',
     descripcion: 'Lluvia, pájaros y río',
     archivo: '/sounds/naturaleza.mp3',
-    duracion: 300 // 5 minutos
+    duracion: 300 
   },
   olas: {
     nombre: 'Olas del Mar',
@@ -18,41 +18,41 @@ export const sonidosDisponibles = {
     nombre: 'Guía de Respiración',
     descripcion: 'Ejercicio 4-7-8',
     archivo: '/sounds/respiracion.mp3',
-    duracion: 180 // 3 minutos
+    duracion: 180 
   },
   musica: {
     nombre: 'Música Instrumental',
     descripcion: 'Piano relajante',
     archivo: '/sounds/piano.mp3',
-    duracion: 600 // 10 minutos
+    duracion: 600 
   }
 };
 
-// Videos de YouTube relajantes (IDs reales de videos públicos)
+
 export const videosYouTube = {
   respiracion: {
     nombre: 'Ejercicio de Respiración Guiada',
-    videoId: 'SEfs5TJZ6Nk', // Video de 5 minutos de respiración
+    videoId: 'SEfs5TJZ6Nk', 
     duracion: 300
   },
   naturaleza: {
     nombre: 'Sonidos de Bosque - 1 hora',
-    videoId: '3QlPppPsnYw', // Sonidos de bosque
+    videoId: '3QlPppPsnYw', 
     duracion: 3600
   },
   meditacion: {
     nombre: 'Meditación para Ansiedad - 10 min',
-    videoId: 'O-6f5wQXSu8', // Meditación guiada
+    videoId: 'O-6f5wQXSu8', 
     duracion: 600
   },
   lluvia: {
     nombre: 'Sonido de Lluvia - 30 min',
-    videoId: 'q76bMs-NwRk', // Lluvia relajante
+    videoId: 'q76bMs-NwRk', 
     duracion: 1800
   }
 };
 
-// Clase para manejar reproducción de audio
+
 class AudioManager {
   constructor() {
     this.audioActual = null;
@@ -60,7 +60,7 @@ class AudioManager {
   }
 
   reproducir(tipoSonido) {
-    // Detener audio actual si existe
+    
     this.detener();
 
     const sonido = sonidosDisponibles[tipoSonido];
@@ -71,8 +71,8 @@ class AudioManager {
 
     try {
       this.audioActual = new Audio(sonido.archivo);
-      this.audioActual.loop = true; // Repetir en loop
-      this.audioActual.volume = 0.7; // Volumen al 70%
+      this.audioActual.loop = true; 
+      this.audioActual.volume = 0.7; 
 
       this.audioActual.play()
         .then(() => {
@@ -81,7 +81,7 @@ class AudioManager {
         })
         .catch(error => {
           console.error('Error al reproducir audio:', error);
-          // Fallback: algunos navegadores requieren interacción del usuario
+      
           console.log('Intenta hacer clic en el botón de reproducción nuevamente');
         });
 
@@ -104,7 +104,7 @@ class AudioManager {
 
   ajustarVolumen(nivel) {
     if (this.audioActual) {
-      // Nivel debe ser entre 0 y 1
+      
       this.audioActual.volume = Math.max(0, Math.min(1, nivel));
     }
   }
@@ -118,16 +118,16 @@ class AudioManager {
   }
 }
 
-// Instancia única del gestor de audio
+
 export const gestorAudio = new AudioManager();
 
-// Función para reproducir sonido de emergencia
+
 export const reproducirSonidoEmergencia = (preferencia = 'naturaleza') => {
   console.log('🚨 Activando sonido de emergencia:', preferencia);
   gestorAudio.reproducir(preferencia);
 };
 
-// Función para detener todos los sonidos
+
 export const detenerSonidos = () => {
   gestorAudio.detener();
 };

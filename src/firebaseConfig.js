@@ -1,8 +1,8 @@
-// Configuración de Firebase para Nutrias en Equilibrio
+
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
-// Configuración de Firebase
+
 const firebaseConfig = {
   apiKey: "AIzaSyAjIATIFlP3cg8P7mqvXNy0xY9gfy1eNQo",
   authDomain: "nutrias-equilibrio.firebaseapp.com",
@@ -13,7 +13,7 @@ const firebaseConfig = {
   appId: "1:365322544392:web:75ff00aaa0cba72985f8bd"
 };
 
-// Inicializar Firebase
+
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 

@@ -1,8 +1,8 @@
-// Utilidades para manejo de datos del peluche
+
 import { database } from './firebaseConfig';
 import { ref, set, get, push, onValue, query, orderByChild, limitToLast } from 'firebase/database';
 
-// Generar código único para el peluche (formato: NUTRIA-XXXXX)
+
 export const generarCodigoPeluche = () => {
   const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let codigo = 'NUTRIA-';
@@ -12,7 +12,7 @@ export const generarCodigoPeluche = () => {
   return codigo;
 };
 
-// Vincular peluche con configuración del usuario
+
 export const vincularPeluche = async (codigoPeluche, configuracion) => {
   try {
     const pelucheRef = ref(database, `peluches/${codigoPeluche}`);
@@ -32,7 +32,7 @@ export const vincularPeluche = async (codigoPeluche, configuracion) => {
   }
 };
 
-// Obtener configuración del peluche
+
 export const obtenerConfiguracionPeluche = async (codigoPeluche) => {
   try {
     const pelucheRef = ref(database, `peluches/${codigoPeluche}`);
@@ -48,7 +48,7 @@ export const obtenerConfiguracionPeluche = async (codigoPeluche) => {
   }
 };
 
-// Guardar lectura del sensor
+
 export const guardarLecturaSensor = async (codigoPeluche, presion) => {
   try {
     const lecturaRef = ref(database, `lecturas/${codigoPeluche}`);
@@ -66,7 +66,7 @@ export const guardarLecturaSensor = async (codigoPeluche, presion) => {
   }
 };
 
-// Obtener lecturas recientes (últimas 100)
+
 export const obtenerLecturasRecientes = async (codigoPeluche, limite = 100) => {
   try {
     const lecturasRef = ref(database, `lecturas/${codigoPeluche}`);
@@ -88,7 +88,7 @@ export const obtenerLecturasRecientes = async (codigoPeluche, limite = 100) => {
   }
 };
 
-// Escuchar lecturas en tiempo real
+
 export const escucharLecturasEnTiempoReal = (codigoPeluche, callback) => {
   const lecturasRef = ref(database, `lecturas/${codigoPeluche}`);
   const lecturasQuery = query(lecturasRef, orderByChild('timestamp'), limitToLast(1));
@@ -102,7 +102,7 @@ export const escucharLecturasEnTiempoReal = (codigoPeluche, callback) => {
   });
 };
 
-// Obtener estadísticas del día
+
 export const obtenerEstadisticasDia = async (codigoPeluche) => {
   try {
     const hoy = new Date().toLocaleDateString('es-MX');
