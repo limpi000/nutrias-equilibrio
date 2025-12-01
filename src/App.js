@@ -529,9 +529,9 @@ const Header = () => {
 return ( 
 <header style={styles.header}> 
 <h1>Nutrias en Equilibrio 🦦</h1> 
-<p>Apoyo psicológico</p> 
+<p>Apoyo psicológicoo</p> 
 </header> 
-); 
+);      
 }; 
  
 const Navigation = ({ currentSection, setCurrentSection }) => {
