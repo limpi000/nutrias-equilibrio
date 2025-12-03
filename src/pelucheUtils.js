@@ -51,6 +51,17 @@ export const obtenerConfiguracionPeluche = async (codigoPeluche) => {
 
 export const guardarLecturaSensor = async (codigoPeluche, presion) => {
   try {
+    // Filtrar: solo guardar si supera el 70% de fuerza
+    if (presion < 70) {
+      return {
+        success: false,
+        message: 'Lectura descartada: no supera el 70% de fuerza',
+        filtrado: true,
+        porcentaje: presion,
+        umbral: 70
+      };
+    }
+
     const lecturaRef = ref(database, `lecturas/${codigoPeluche}`);
     const nuevaLectura = push(lecturaRef);
     await set(nuevaLectura, {
