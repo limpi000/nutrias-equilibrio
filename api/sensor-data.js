@@ -38,10 +38,11 @@ function validarCodigoPeluche(codigo) {
   return regex.test(codigo);
 }
 
-// Función para validar la presión
+// Función para validar el porcentaje de presión
+// El ESP32 ya envía el valor convertido a porcentaje (0-100%)
 function validarPresion(presion) {
   const num = Number(presion);
-  return !isNaN(num) && num >= 0 && num <= 1023; // Rango del sensor FSR
+  return !isNaN(num) && num >= 0 && num <= 100; // Porcentaje de fuerza
 }
 
 // Handler del endpoint
@@ -78,7 +79,23 @@ export default async function handler(req, res) {
     if (!validarPresion(presion)) {
       return res.status(400).json({
         success: false,
-        error: 'Presión inválida. Debe ser un número entre 0 y 1023.'
+        error: 'Porcentaje de presión inválido. Debe ser un número entre 0 y 100.'
+      });
+    }
+
+    const porcentajeFuerza = Number(presion);
+
+    // Filtrar: solo guardar si supera el 85% de fuerza
+    if (porcentajeFuerza < 85) {
+      return res.status(200).json({
+        success: true,
+        message: 'Lectura descartada: no supera el 85% de fuerza',
+        data: {
+          pelucheId,
+          porcentaje: porcentajeFuerza,
+          umbral: 85,
+          guardado: false
+        }
       });
     }
 
@@ -93,10 +110,10 @@ export default async function handler(req, res) {
       });
     }
 
-    // Guardar la lectura en Firebase
+    // Guardar la lectura en Firebase (solo registros >= 85%)
     const lecturaRef = db.ref(`lecturas/${pelucheId}`).push();
     await lecturaRef.set({
-      presion: Number(presion),
+      presion: porcentajeFuerza,
       timestamp: new Date().toISOString(),
       fecha: new Date().toLocaleDateString('es-MX'),
       hora: new Date().toLocaleTimeString('es-MX')
@@ -105,10 +122,12 @@ export default async function handler(req, res) {
     // Responder con éxito
     return res.status(200).json({
       success: true,
-      message: 'Lectura guardada correctamente',
+      message: 'Lectura guardada correctamente (>= 85% de fuerza)',
       data: {
         pelucheId,
-        presion: Number(presion),
+        porcentaje: porcentajeFuerza,
+        umbral: 85,
+        guardado: true,
         timestamp: new Date().toISOString()
       }
     });
