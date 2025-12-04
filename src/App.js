@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import VincularPeluche from "./components/VincularPeluche";
-import Dashboard from "./components/Dashboard";
 import MonitoreoTiempoReal from "./components/MonitoreoTiempoReal"; 
  
 // Estilos principales 
@@ -549,7 +548,6 @@ const sections = [
 { id: "inicio", name: "Inicio" },
 { id: "vincular", name: "🦦 Vincular Mi Peluche" },
 { id: "monitoreo", name: "🎛️ Monitoreo" },
-{ id: "dashboard", name: "📊 Dashboard" },
 { id: "lugares", name: "Lugares de Tratamiento" },
 { id: "Taller", name: "Taller" },
 { id: "trastornos", name: "Trastornos" },
@@ -584,9 +582,6 @@ return <VincularPeluche />;
 
 case "monitoreo":
 return <MonitoreoTiempoReal />;
-
-case "dashboard":
-return <Dashboard />;
 
 case "inicio":
 return (
