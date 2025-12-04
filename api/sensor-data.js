@@ -85,15 +85,16 @@ export default async function handler(req, res) {
 
     const porcentajeFuerza = Number(presion);
 
-    // Filtrar: solo guardar si supera el 70% de fuerza
-    if (porcentajeFuerza < 70) {
+    // Filtrar: solo guardar registros altos (>= 30)
+    // Categorías: Bajo (<=15), Mediano (>15 y <30), Alto (>=30)
+    if (porcentajeFuerza < 30) {
       return res.status(200).json({
         success: true,
-        message: 'Lectura descartada: no supera el 70% de fuerza',
+        message: 'Lectura descartada: no alcanza categoría alta (requiere >= 30)',
         data: {
           pelucheId,
           porcentaje: porcentajeFuerza,
-          umbral: 70,
+          umbral: 30,
           guardado: false
         }
       });
@@ -110,7 +111,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // Guardar la lectura en Firebase (solo registros >= 70%)
+    // Guardar la lectura en Firebase (solo registros altos >= 30)
     const lecturaRef = db.ref(`lecturas/${pelucheId}`).push();
     await lecturaRef.set({
       presion: porcentajeFuerza,
@@ -122,11 +123,11 @@ export default async function handler(req, res) {
     // Responder con éxito
     return res.status(200).json({
       success: true,
-      message: 'Lectura guardada correctamente (>= 70% de fuerza)',
+      message: 'Lectura guardada correctamente (categoría alta >= 30)',
       data: {
         pelucheId,
         porcentaje: porcentajeFuerza,
-        umbral: 70,
+        umbral: 30,
         guardado: true,
         timestamp: new Date().toISOString()
       }
