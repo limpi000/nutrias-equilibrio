@@ -3,7 +3,7 @@ export const sonidosDisponibles = {
   naturaleza: {
     nombre: 'Sonidos de Naturaleza',
     descripcion: 'Lluvia, pájaros y río',
-    archivo: '/sounds/naturaleza.mp3',
+    archivo: '/sounds/birds-339196.mp3',
     duracion: 300 
   },
   olas: {
