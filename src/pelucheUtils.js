@@ -51,14 +51,15 @@ export const obtenerConfiguracionPeluche = async (codigoPeluche) => {
 
 export const guardarLecturaSensor = async (codigoPeluche, presion) => {
   try {
-    // Filtrar: solo guardar si supera el 70% de fuerza
-    if (presion < 70) {
+    // Filtrar: solo guardar registros altos (>= 30)
+    // Categorías: Bajo (<=15), Mediano (>15 y <30), Alto (>=30)
+    if (presion < 30) {
       return {
         success: false,
-        message: 'Lectura descartada: no supera el 70% de fuerza',
+        message: 'Lectura descartada: no alcanza categoría alta (requiere >= 30)',
         filtrado: true,
         porcentaje: presion,
-        umbral: 70
+        umbral: 30
       };
     }
 
