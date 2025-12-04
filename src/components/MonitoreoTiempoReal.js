@@ -84,8 +84,8 @@ const MonitoreoTiempoReal = () => {
   };
 
   const getNivelPresion = (presion) => {
-    if (presion >= 70) return { nivel: 'CRISIS', color: '#f44336', emoji: '🔴' };
-    if (presion >= 50) return { nivel: 'ATENCIÓN', color: '#ff9800', emoji: '🟡' };
+    if (presion >= 30) return { nivel: 'CRISIS', color: '#f44336', emoji: '🔴' };
+    if (presion >= 15) return { nivel: 'ATENCIÓN', color: '#ff9800', emoji: '🟡' };
     return { nivel: 'CALMA', color: '#4caf50', emoji: '🟢' };
   };
 
